@@ -32,14 +32,14 @@ You can run a fee node. This node will be picked up by our network as a supporti
 You can set your fee when you start your node and anyone using that node, the fee money will come to you.
 So how do we get started?
 
-1st things 1st. a Node can only be on a server that is available 24/7 and always online. Any nodes not deem fit will be removed from the network.
+1st things 1st. a Node can only be on a server that is available 24/7 and always online. Any nodes not deemed fit will be removed from the network.
 You need to get a server 1st.
 You can obtain one here.
 https://m.do.co/c/2ce55fb45f2d
 
 Once you registered your account go ahead and buy a droplet. They range from 5-50 USD a month. Please use a droplet with at least 2 gig ram and 40Gig drive space.
-your O.S should be Ubuntu 18 or 20
-There are a few things you should do before you follow the build instructions below.
+Your O.S should be Ubuntu 18 or 20
+There are a few things you should do before you follow the build instructions.
 Make sure your droplet(server) is up-to-date 
 run 
 sudo apt-get update
@@ -81,16 +81,21 @@ ufw enable
 enter
 it will come up with a warning about your current connection. if you did add port 22 you will be okay just say yes
 
-now we need to keep the daemon running even after restarting
-for this we are going to install a little program called pm2
+now we need to keep the daemon running even after restarting.
+For this we are going to install a little program called pm2
+
 npm install -g pm2@latest
 pm2 startup
-pm2 start daemon.sh --name cpa-coin-daemon -i max
+pm2 start daemon.sh --name cpa-coin-daemon -i max (make sure you are in the cpacoin directory where the file is)
 pm2 save
 
+now you can start restart stop with the following commands
+pm2 start name cpa-coin-daemon
+pm2 stop name cpa-coin-daemon
+pm2 restart name cpa-coin-daemon
 you can type pm2 l (this will show what’s running and if its up or down)
 
-That is it your node should be visible via the I.P
+That is it.... your node should be visible via the I.P
 http://your-ip:13281/info
 
 You can create a domain name for it on the cpa network contact Siluro in discord for more info
