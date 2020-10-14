@@ -1,0 +1,72 @@
+So you want to support the network and run a node?
+
+You can run a fee node. This node will be picked up by our network as a supporting node for our wallets.
+You can set your fee when you start your node and anyone using that node, the fee money will come to you.
+So how do we get started?
+
+1st things 1st. a Node can only be on a server that is available 24/7 and always online. Any nodes not deem fit will be removed from the network.
+You need to get a server 1st.
+You can obtain one here.
+
+Once you registered your account go ahead and buy a droplet. They range from 5-50 USD a month. Please use a droplet with at least 2 gig ram and 40Gig drive space.
+your O.S should be Ubuntu 18 or 20
+There are a few things you should do before you follow the build instructions below.
+Make sure your droplet(server) is up-to-date 
+run 
+sudo apt-get update
+sudo apt-get upgrade
+
+Then proceed to build our coin from source see below and follow instructions.
+once the build is complete you can start the server for a test
+cd cpacoin/build/release/src
+that should put you in the cpa directory
+we need to make a file to start our daemon 1st
+type nano daemon.sh
+copy the following below into the file
+
+
+#!/bin/sh
+echo "running script"
+./cpacoind --enable-cors "*" --rpc-bind-ip 0.0.0.0 --rpc-bind-port 13281 --enable-blockexplorer --enable-blockexplorer-detailed --fee-address cpZxRsnRTUe3riq6mW81RyRWx2BSNcU4Z51jnXUNivH27mRBCsP55vtcmfxpReLHtdF9FVBqvzQwAFgaWefKZWpa2ZqfoQMtu --fee-amount 550000
+
+Of course replace your address with the one above
+hit Ctrl X and save the file
+
+now you can test and see if the file runs by typing
+./daemon.sh 
+enter
+
+This should start the daemon.
+once its synced you can shut the daemon down for the following steps to complete.
+we need to open your firewall
+We use ufw firewall program
+sudo apt-get install ufw
+we need to add the following ports very important step
+
+ufw allow 22 (your ssh)
+enter
+ufw allow 13281 (cpa com port)
+enter
+
+then type 
+ufw enable
+enter
+it will come up with a warning about your current connection. if you did add port 22 you will be okay just say yes
+
+now we need to keep the daemon running even after restarting
+for this we are going to install a little program called pm2
+npm install -g pm2@latest
+pm2 startup
+pm2 start daemon.sh --name cpa-coin-daemon -i max
+pm2 save
+
+you can type pm2 l (this will show what’s running and if its up or down)
+
+That is it your node should be visible via the I.P
+http://your-ip:13281/info
+
+You can create a domain name for it on the cpa network contact Siluro in discord for more info
+yourname.cryptopayafrica.org.za
+
+
+
