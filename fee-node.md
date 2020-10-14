@@ -45,7 +45,7 @@ sudo apt-get upgrade
 
 Then proceed to build our coin from source see below and follow instructions.    https://github.com/devafrica/cpacoin
 once the build is complete you can start the server for a test.
-cd cpacoin/build/release/src
+cd cpacoin/build/src
 that should put you in the cpacoin directory.
 we need to make a file to start our daemon 1st.
 type nano daemon.sh
