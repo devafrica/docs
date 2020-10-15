@@ -40,9 +40,10 @@ Your O.S should be Ubuntu 18 or 20.
 There are a few things you should do before you follow the build instructions.
 Make sure your droplet(server) is up-to-date.
 run 
-sudo apt-get update
-sudo apt-get upgrade
-
+```sh
+$ sudo apt-get update
+$ sudo apt-get upgrade
+```
 Then proceed to build our coin from source see below and follow instructions.    https://github.com/devafrica/cpacoin
 once the build is complete you can start the server for a test.
 cd cpacoin/build/src
