@@ -100,9 +100,9 @@ $ pm2 save
 now you can start restart stop with the following commands.
 
 ```sh
-$ pm2 start name cpa-coin-daemon
-$ pm2 stop name cpa-coin-daemon
-$ pm2 restart name cpa-coin-daemon
+$ pm2 start cpa-coin-daemon
+$ pm2 stop cpa-coin-daemon
+$ pm2 restart cpa-coin-daemon
 $ pm2 l (this will show what’s running and if its up or down).
 ```
 That is it.... your node should be visible via the I.P.
