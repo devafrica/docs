@@ -66,33 +66,42 @@ This should start the daemon.
 once its synced you can shut the daemon down for the following steps to complete.
 we need to open your firewall.
 We use ufw firewall program.
-sudo apt-get install ufw
-we need to add the following ports ....very important step.
 
-ufw allow 22 (your ssh)
-enter
-ufw allow 13281 (cpa com port)
-enter
+```sh
+$ sudo apt-get install ufw
+```
+we need to add the following ports ....very important step.
+```sh
+$ ufw allow 22 (your ssh)
+$ ufw allow 13281 (cpa com port)
+$ enter
+```
 
 then type 
-ufw enable
-enter
+
+```sh
+$ ufw enable
+$ enter
+```
 it will come up with a warning about your current connection. if you did add port 22 you will be okay just say yes.
 
 now we need to keep the daemon running even after restarting.
 For this we are going to install a little program called pm2.
 
-npm install -g pm2@latest
-pm2 startup
-pm2 start daemon.sh --name cpa-coin-daemon -i max (make sure you are in the cpacoin directory where the file is)
-pm2 save
-
+```sh
+$ npm install -g pm2@latest
+$ pm2 startup
+$ pm2 start daemon.sh --name cpa-coin-daemon -i max (make sure you are in the cpacoin directory where the file is)
+$ pm2 save
+```
 now you can start restart stop with the following commands.
-pm2 start name cpa-coin-daemon
-pm2 stop name cpa-coin-daemon
-pm2 restart name cpa-coin-daemon
-you can type pm2 l (this will show what’s running and if its up or down).
 
+```sh
+$ pm2 start name cpa-coin-daemon
+$ pm2 stop name cpa-coin-daemon
+$ pm2 restart name cpa-coin-daemon
+$ pm2 l (this will show what’s running and if its up or down).
+```
 That is it.... your node should be visible via the I.P.
 http://your-ip:13281/info
 
