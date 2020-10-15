@@ -1,4 +1,4 @@
-# CryptoPayAfrica (CPA Coin)
+# CryptoPayAfrica --Starting a Fee Node-- (CPA Coin)
 ##### Bringing Blockchain to Africa
 
 [![Discord](https://img.shields.io/discord/471645937606066176?label=CryptoPayAfrica%20Discord)](https://discord.gg/HmTCVbS) [![GitHub contributors](https://img.shields.io/github/contributors-anon/devafrica/cpacoin?label=Contributors)](https://github.com/devafrica/cpacoin/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/devafrica/cpacoin?label=Issues)](https://github.com/devafrica/cpacoin/issues) ![GitHub stars](https://img.shields.io/github/stars/devafrica/cpacoin?label=Github%20Stars)
