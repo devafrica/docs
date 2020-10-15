@@ -8,8 +8,10 @@
 ### CPA Coin Core Build Code and Fee node installation
 
 **Cpa Coin Core**
+
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/devafrica/cpacoin)  
 ![GitHub All Releases](https://img.shields.io/github/downloads/devafrica/cpacoin/total)
+
   **Windows Gui Wallet Latest**
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/devafrica/cpa-wallet-proton)
  ![GitHub All Releases](https://img.shields.io/github/downloads/devafrica/cpa-wallet-proton/total)
