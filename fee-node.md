@@ -56,7 +56,7 @@ copy the following below into the file
 
 #!/bin/sh
 echo "running script"
-./cpacoind --enable-cors "*" --rpc-bind-ip 0.0.0.0 --rpc-bind-port 13281 --enable-blockexplorer --enable-blockexplorer-detailed --fee-address cpZxRsnRTUe3riq6mW81RyRWx2BSNcU4Z51jnXUNivH27mRBCsP55vtcmfxpReLHtdF9FVBqvzQwAFgaWefKZWpa2ZqfoQMtu --fee-amount 550000
+./cpacoind --enable-cors "*" --rpc-bind-ip 0.0.0.0 --rpc-bind-port 13291 --enable-blockexplorer --enable-blockexplorer-detailed --fee-address cpZxRsnRTUe3riq6mW81RyRWx2BSNcU4Z51jnXUNivH27mRBCsP55vtcmfxpReLHtdF9FVBqvzQwAFgaWefKZWpa2ZqfoQMtu --fee-amount 550000
 
 Of course replace your address with the one above.
 hit Ctrl X and save the file.
@@ -76,7 +76,7 @@ $ sudo apt-get install ufw
 we need to add the following ports ....very important step.
 ```sh
 $ ufw allow 22 (your ssh)
-$ ufw allow 13281 (cpa com port)
+$ ufw allow 13291 (cpa com port)
 $ enter
 ```
 
@@ -106,7 +106,7 @@ $ pm2 restart cpa-coin-daemon
 $ pm2 l (this will show what’s running and if its up or down).
 ```
 That is it.... your node should be visible via the I.P.
-http://your-ip:13281/info
+http://your-ip:13291/info
 
 You can create a domain name for it on the cpa network contact Siluro in discord for more info.
 yourname.cryptopayafrica.org.za.
